@@ -4,5 +4,5 @@ COPY . .
 RUN mvn clean package
 
 FROM openjdk:17-jdk-alpine3.14
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/springboot-demo-docker-0.0.1-SNAPSHOT.jar app.jar
 CMD ["java", "-jar", "app.jar"]
